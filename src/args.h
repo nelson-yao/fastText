@@ -48,7 +48,7 @@ class Args {
   int verbose;
   std::string pretrainedVectors;
   bool saveOutput;
-
+  float lambda; 
   bool qout;
   bool retrain;
   bool qnorm;

@@ -36,6 +36,7 @@ Args::Args() {
   verbose = 2;
   pretrainedVectors = "";
   saveOutput = false;
+  lambda = 0.0;
 
   qout = false;
   retrain = false;
@@ -170,6 +171,8 @@ void Args::parseArgs(const std::vector<std::string>& args) {
         cutoff = std::stoi(args.at(ai + 1));
       } else if (args[ai] == "-dsub") {
         dsub = std::stoi(args.at(ai + 1));
+      } else if (args[ai] == "-lambda"){
+        lambda = std::stof(args.at(ai+1));
       } else {
         std::cerr << "Unknown argument: " << args[ai] << std::endl;
         printHelp();
